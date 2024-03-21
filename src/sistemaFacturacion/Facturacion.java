@@ -8,8 +8,7 @@ import java.util.ArrayList;
  * Esta clase sirve para guardar la lista de los productos que se vayan añadiendo y realizar las operaciones correspondientes
  * */
 public class Facturacion {
-
-    ArrayList<Producto> listaProducto ;
+   private ArrayList<Producto> listaProducto ;
 
 
 
@@ -25,11 +24,40 @@ public class Facturacion {
             System.out.println("¡Producto añadido correctamente!");
 
         }
+/**
+ * Este metodo es para mostrar el resultado de la compra
+ * utiliza un for mejorado para recorrer toda la lista
+ * @see
+ * @since 0.2
+ * */
+        public void imprimirLista(){
 
-        private void imprimirLista(){
+            System.out.println("***TOTAL FACTURA***");
 
+            for (Producto productoF : listaProducto){
+
+
+                System.out.println(productoF.toString());
+
+            }
 
         }
+/**
+ * Este método sirve para imprimir la factura final del usuario
+ * @since  0.2
+ */
+         public void imprimirFactura(){
+
+        System.out.println("***TOTAL FACTURA***");
+
+        for (Producto productoF : listaProducto){
+
+
+            System.out.println(productoF.toString());
+
+        }
+
+    }
 
 
 }

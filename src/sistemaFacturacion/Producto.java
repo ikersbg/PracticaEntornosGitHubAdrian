@@ -45,7 +45,7 @@ public class Producto {
     }
 /**
  * @since 0.1
- * @return  este metodo nos devolvera el toString de producto
+ * @return  este metodo nos desvolvera el nombre , precio y cantidad de cada producto
  * */
     @Override
     public String toString() {
