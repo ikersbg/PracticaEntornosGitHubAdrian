@@ -30,22 +30,42 @@ public class ProgramaFacturacion {
 
         }
         boolean acabado = false;
+
+
+
         while (acabado != true){
             Facturacion facturacionF = new Facturacion();
+            switch (opcionUsuario) {
 
-            if (opcionUsuario == 1) {
-                facturacionF.imprimirLista();
-                
-            } else if (opcionUsuario == 2) {
+                case 1:
+                    facturacionF.imprimirLista();
+                    break;
 
-            } else if (opcionUsuario == 3) {
-                
-            } else if (opcionUsuario == 4) {
-                
-            } else if ( opcionUsuario == 5) {
-                acabado = true;
+                case 2:
 
+                    break;
+
+                case 3:
+                break;
+
+                case 4:
+                    System.out.println("¿Cual es el nombre del producto?");
+                    String nombreProducto = teclado.next();
+
+                    System.out.println("Ahora dime cuanto vale una unidad de ese producto");
+                    int precioUnidad = teclado.nextInt();
+
+                    System.out.println("Y por último cuantas unidades se ha llevado de ese producto");
+                    int cantidadP = teclado.nextInt();
+
+                    Producto productoUsuario = new Producto(nombreProducto,precioUnidad,cantidadP);
+                    facturacionF.anyadirProductoLista(productoUsuario);
+
+                break;
+                default:
+                    acabado = true;
             }
+
 
 
 

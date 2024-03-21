@@ -18,7 +18,7 @@ public class Facturacion {
     }
 
 
-        private void añadirProductoLista(Producto nuevoProducto){
+        public void anyadirProductoLista(Producto nuevoProducto){
 
             listaProducto.add(nuevoProducto);
             System.out.println("¡Producto añadido correctamente!");
@@ -56,8 +56,23 @@ public class Facturacion {
             System.out.println(productoF.toString());
 
         }
-
+             System.out.println("Precio Final: " + calcularPrecioPorProducto() + "€");
     }
+/**
+ * En este metodo  vamos a calcular el precio final de la factura
+ * @return precioFinaL devolverá el valor de todos los productos
+ * @since 1.0
+ * */
+        public  int calcularPrecioPorProducto(){
+
+             int precioFinaL = 0;
+             for (Producto productoF : listaProducto){
+
+                 precioFinaL = precioFinaL + (productoF.getPrecio() * productoF.getCantidad());
+
+             }
+             return precioFinaL;
+        }
 
 
 }
