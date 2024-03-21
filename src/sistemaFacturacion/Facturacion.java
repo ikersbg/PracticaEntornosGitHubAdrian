@@ -4,20 +4,28 @@ import java.util.ArrayList;
 
 /**
  * @author AdrianDueñasGomez
- * @Version 0.1
+ * @version  0.1
  * Esta clase sirve para guardar la lista de los productos que se vayan añadiendo y realizar las operaciones correspondientes
  * */
 public class Facturacion {
    private ArrayList<Producto> listaProducto ;
 
 
-
+/**
+ * Constructor de la clase facturacion el que se almacena un arratList listaProducto
+ * @since  0.1
+ * */
     public Facturacion (){
     listaProducto = new ArrayList<>();
 
     }
 
-
+/**
+ * Método para añadir los productos al arrayList "listaProducto"
+ * @see Producto
+ * @param  nuevoProducto valor del objeto producto del usuario que deseamos añadir
+ * @since 0.1
+ * */
         public void anyadirProductoLista(Producto nuevoProducto){
 
             listaProducto.add(nuevoProducto);
@@ -27,8 +35,8 @@ public class Facturacion {
 /**
  * Este metodo es para mostrar el resultado de la compra
  * utiliza un for mejorado para recorrer toda la lista
- * @see
  * @since 0.2
+ * @see Producto
  * */
         public void imprimirLista(){
 
@@ -41,17 +49,19 @@ public class Facturacion {
 
             }
 
+
+
         }
 /**
  * Este método sirve para imprimir la factura final del usuario
  * @since  0.2
+ * @see Producto
  */
          public void imprimirFactura(){
 
         System.out.println("***TOTAL FACTURA***");
 
         for (Producto productoF : listaProducto){
-
 
             System.out.println(productoF.toString());
 
@@ -62,6 +72,7 @@ public class Facturacion {
  * En este metodo  vamos a calcular el precio final de la factura
  * @return precioFinaL devolverá el valor de todos los productos
  * @since 1.0
+ * @see Producto
  * */
         public  int calcularPrecioPorProducto(){
 
@@ -73,6 +84,16 @@ public class Facturacion {
              }
              return precioFinaL;
         }
+    /**
+     * Este metodo nos permite eliminar un producto del arrayList listaProducto
+     * @param posicion valor que indica la posicion del producto que desea eliminar el usuario
+     * @since 1.1
+     * @see Producto
+     * */
+        public  void eliminarProducto(int posicion){
 
+            listaProducto.remove(posicion);
+            System.out.println("Producto eliminado correctamente");
+        }
 
 }
