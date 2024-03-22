@@ -2,13 +2,13 @@ package sistemaFacturacion;
 
 import java.util.Scanner;
 /**
- * @author AdrianDueñasGomez
- * @version 0.1
  * Esta es la clase main , donde vamos a ejecutar el programa mostrandole al usuario un menu donde pueda elegir entre 5 opciones
+ * @author AdrianDueñasGomez
+ * @version 1.1
  * */
 public class ProgramaFacturacion {
    /**
-    * El metodo main mostrara un menu al usuario , si elije una opción que no este en esas opciones se le enviara un error para que vuelva a elegir
+    * El metodo main mostrará un menu al usuario , si elije una opción que no este en esas opciones se le enviara un error para que vuelva a elegir
     * @since 0.1
     * */
     public static void main(String[] args) {

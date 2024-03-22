@@ -3,9 +3,9 @@ package sistemaFacturacion;
 import java.util.ArrayList;
 
 /**
+ *  Esta clase sirve para guardar la lista de los productos que se vayan añadiendo y realizar las operaciones correspondientes
  * @author AdrianDueñasGomez
- * @version  0.1
- * Esta clase sirve para guardar la lista de los productos que se vayan añadiendo y realizar las operaciones correspondientes
+ * @version  1.1
  * */
 public class Facturacion {
    private ArrayList<Producto> listaProducto ;
