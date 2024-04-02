@@ -60,4 +60,12 @@ public class Producto {
                 ", cantidad=" + cantidad +
                 '}';
     }
+/**
+ * Método que servía para introducir el nombre del producto
+ * @deprecated
+ * @since 1.1
+ * */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }
